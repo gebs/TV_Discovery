@@ -16,6 +16,9 @@
 		63ADD28B1DECAC1B00F1F04E /* TVShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADD28A1DECAC1B00F1F04E /* TVShowViewController.swift */; };
 		63ADD28D1DECAD5D00F1F04E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADD28C1DECAD5D00F1F04E /* WebService.swift */; };
 		63ADD28F1DECB24500F1F04E /* CalendarWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADD28E1DECB24500F1F04E /* CalendarWebService.swift */; };
+		63E879E01DECBA1F00988B8B /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E879DF1DECBA1F00988B8B /* Show.swift */; };
+		63E879E81DECBEA500988B8B /* Ids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E879E71DECBEA500988B8B /* Ids.swift */; };
+		63E879EA1DECBEAF00988B8B /* Airs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E879E91DECBEAF00988B8B /* Airs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		63ADD28A1DECAC1B00F1F04E /* TVShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowViewController.swift; sourceTree = "<group>"; };
 		63ADD28C1DECAD5D00F1F04E /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		63ADD28E1DECB24500F1F04E /* CalendarWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWebService.swift; sourceTree = "<group>"; };
+		63E879DF1DECBA1F00988B8B /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		63E879E71DECBEA500988B8B /* Ids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ids.swift; sourceTree = "<group>"; };
+		63E879E91DECBEAF00988B8B /* Airs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 		63ADD2861DECAB6A00F1F04E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63E879DF1DECBA1F00988B8B /* Show.swift */,
+				63E879E71DECBEA500988B8B /* Ids.swift */,
+				63E879E91DECBEAF00988B8B /* Airs.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -175,7 +184,10 @@
 				63ADD2751DECA57F00F1F04E /* ViewController.swift in Sources */,
 				63ADD2851DECA84E00F1F04E /* TVShowTableViewCell.swift in Sources */,
 				63ADD28F1DECB24500F1F04E /* CalendarWebService.swift in Sources */,
+				63E879EA1DECBEAF00988B8B /* Airs.swift in Sources */,
 				63ADD2731DECA57F00F1F04E /* AppDelegate.swift in Sources */,
+				63E879E81DECBEA500988B8B /* Ids.swift in Sources */,
+				63E879E01DECBA1F00988B8B /* Show.swift in Sources */,
 				63ADD28D1DECAD5D00F1F04E /* WebService.swift in Sources */,
 				63ADD28B1DECAC1B00F1F04E /* TVShowViewController.swift in Sources */,
 			);
@@ -337,6 +349,7 @@
 				63ADD2831DECA57F00F1F04E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
