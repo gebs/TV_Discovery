@@ -13,6 +13,9 @@
 		63ADD27A1DECA57F00F1F04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63ADD2791DECA57F00F1F04E /* Assets.xcassets */; };
 		63ADD27D1DECA57F00F1F04E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63ADD27B1DECA57F00F1F04E /* LaunchScreen.storyboard */; };
 		63ADD2851DECA84E00F1F04E /* TVShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADD2841DECA84E00F1F04E /* TVShowTableViewCell.swift */; };
+		63ADD28B1DECAC1B00F1F04E /* TVShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADD28A1DECAC1B00F1F04E /* TVShowViewController.swift */; };
+		63ADD28D1DECAD5D00F1F04E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADD28C1DECAD5D00F1F04E /* WebService.swift */; };
+		63ADD28F1DECB24500F1F04E /* CalendarWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADD28E1DECB24500F1F04E /* CalendarWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		63ADD27C1DECA57F00F1F04E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63ADD27E1DECA57F00F1F04E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63ADD2841DECA84E00F1F04E /* TVShowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowTableViewCell.swift; sourceTree = "<group>"; };
+		63ADD28A1DECAC1B00F1F04E /* TVShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowViewController.swift; sourceTree = "<group>"; };
+		63ADD28C1DECAD5D00F1F04E /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		63ADD28E1DECB24500F1F04E /* CalendarWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		63ADD2711DECA57F00F1F04E /* TV_Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				63ADD2891DECAB9400F1F04E /* Webservice */,
+				63ADD2881DECAB7D00F1F04E /* ViewController */,
+				63ADD2861DECAB6A00F1F04E /* Model */,
 				63ADD2721DECA57F00F1F04E /* AppDelegate.swift */,
 				63ADD2741DECA57F00F1F04E /* ViewController.swift */,
 				63ADD2761DECA57F00F1F04E /* Main.storyboard */,
@@ -65,6 +74,30 @@
 				63ADD2841DECA84E00F1F04E /* TVShowTableViewCell.swift */,
 			);
 			path = TV_Discovery;
+			sourceTree = "<group>";
+		};
+		63ADD2861DECAB6A00F1F04E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		63ADD2881DECAB7D00F1F04E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63ADD28A1DECAC1B00F1F04E /* TVShowViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		63ADD2891DECAB9400F1F04E /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				63ADD28C1DECAD5D00F1F04E /* WebService.swift */,
+				63ADD28E1DECB24500F1F04E /* CalendarWebService.swift */,
+			);
+			name = Webservice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +174,10 @@
 			files = (
 				63ADD2751DECA57F00F1F04E /* ViewController.swift in Sources */,
 				63ADD2851DECA84E00F1F04E /* TVShowTableViewCell.swift in Sources */,
+				63ADD28F1DECB24500F1F04E /* CalendarWebService.swift in Sources */,
 				63ADD2731DECA57F00F1F04E /* AppDelegate.swift in Sources */,
+				63ADD28D1DECAD5D00F1F04E /* WebService.swift in Sources */,
+				63ADD28B1DECAC1B00F1F04E /* TVShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

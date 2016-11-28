@@ -10,7 +10,7 @@
         <!--Root View Controller-->
         <scene sceneID="XVp-3G-xlY">
             <objects>
-                <tableViewController id="52w-6F-hbz" sceneMemberID="viewController">
+                <tableViewController id="52w-6F-hbz" customClass="TVShowViewController" customModule="TV_Discovery" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="193" sectionHeaderHeight="28" sectionFooterHeight="28" id="Paf-HJ-g7V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
