@@ -14,4 +14,9 @@ class Airs {
     public var time : String?
     public var timezone : String?
     
+    init(day : String, time : String, timezone : String){
+        self.day = day
+        self.time = time
+        self.timezone = timezone
+    }
 }

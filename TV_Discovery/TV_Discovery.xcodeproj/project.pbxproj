@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		638FDF2D1DEF10C200D98485 /* ShowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638FDF2C1DEF10C200D98485 /* ShowList.swift */; };
+		638FDF2F1DEF14D100D98485 /* AllLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638FDF2E1DEF14D100D98485 /* AllLists.swift */; };
+		638FDF311DEF18A600D98485 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638FDF301DEF18A600D98485 /* Episode.swift */; };
 		63ADD2731DECA57F00F1F04E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADD2721DECA57F00F1F04E /* AppDelegate.swift */; };
 		63ADD2751DECA57F00F1F04E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADD2741DECA57F00F1F04E /* ViewController.swift */; };
 		63ADD2781DECA57F00F1F04E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63ADD2761DECA57F00F1F04E /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		638FDF2C1DEF10C200D98485 /* ShowList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowList.swift; sourceTree = "<group>"; };
+		638FDF2E1DEF14D100D98485 /* AllLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllLists.swift; sourceTree = "<group>"; };
+		638FDF301DEF18A600D98485 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		63ADD26F1DECA57F00F1F04E /* TV_Discovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV_Discovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63ADD2721DECA57F00F1F04E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63ADD2741DECA57F00F1F04E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 				63E879DF1DECBA1F00988B8B /* Show.swift */,
 				63E879E71DECBEA500988B8B /* Ids.swift */,
 				63E879E91DECBEAF00988B8B /* Airs.swift */,
+				638FDF2C1DEF10C200D98485 /* ShowList.swift */,
+				638FDF2E1DEF14D100D98485 /* AllLists.swift */,
+				638FDF301DEF18A600D98485 /* Episode.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,13 +191,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				63ADD2751DECA57F00F1F04E /* ViewController.swift in Sources */,
+				638FDF311DEF18A600D98485 /* Episode.swift in Sources */,
 				63ADD2851DECA84E00F1F04E /* TVShowTableViewCell.swift in Sources */,
 				63ADD28F1DECB24500F1F04E /* CalendarWebService.swift in Sources */,
 				63E879EA1DECBEAF00988B8B /* Airs.swift in Sources */,
 				63ADD2731DECA57F00F1F04E /* AppDelegate.swift in Sources */,
+				638FDF2F1DEF14D100D98485 /* AllLists.swift in Sources */,
 				63E879E81DECBEA500988B8B /* Ids.swift in Sources */,
 				63E879E01DECBA1F00988B8B /* Show.swift in Sources */,
 				63ADD28D1DECAD5D00F1F04E /* WebService.swift in Sources */,
+				638FDF2D1DEF10C200D98485 /* ShowList.swift in Sources */,
 				63ADD28B1DECAC1B00F1F04E /* TVShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
