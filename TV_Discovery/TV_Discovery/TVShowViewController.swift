@@ -10,9 +10,23 @@ import Foundation
 import UIKit
 class TVShowViewController : UITableViewController{
     
+    var src = TVShowTableViewSource()
+    
     public override func viewDidLoad() {
+        self.tableView.tableFooterView = UIView()
+        self.tableView.dataSource = src
+        self.tableView.delegate = src
         
-        self.title = ""
+        WebServiceManager.Instance.GetCurrentShows(onCompletion: {(shows:[Show]) in
+            self.src.Shows = shows
+            self.tableView.reloadData()
+        })
+        
+    
+        
+        
+        
+       
         
         
     }

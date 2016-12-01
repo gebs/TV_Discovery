@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Show {
     
@@ -32,6 +33,7 @@ class Show {
     public var genres : Array<String>?
     public var aired_episodes : Int?
     
+<<<<<<< Updated upstream
     //Adds the needed values for the simple View
     init(title : String, year : Int, ids : Ids, episode : Episode ) {
         self.title = title
@@ -67,6 +69,15 @@ class Show {
     //Returns Id to get details for this show
     public func getId() -> Ids{
         return ids
+=======
+    init(data:JSON){
+        if let title = data["show"]["title"].string{
+            self.title = title
+        }
+    }
+    init(){
+    
+>>>>>>> Stashed changes
     }
     
 }

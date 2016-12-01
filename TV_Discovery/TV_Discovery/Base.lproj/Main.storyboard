@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="193"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hpS-yd-f5K" id="zlY-Lw-G1I">
-                                    <frame key="frameInset" width="375" height="192"/>
+                                    <frame key="frameInset" width="375" height="193"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k7Q-3F-B6O">
@@ -119,9 +119,6 @@
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="UZF-dS-P9E" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eDR-Y1-Xuc"/>
-                    <connections>
-                        <segue destination="52w-6F-hbz" kind="show" id="Cv5-kj-5Qe"/>
-                    </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jO-4r-1Ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="UZF-dS-P9E" kind="relationship" relationship="rootViewController" id="eQa-0k-9pG"/>
+                        <segue destination="52w-6F-hbz" kind="relationship" relationship="rootViewController" id="Hd6-J0-GHA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6a1-5P-0MX" userLabel="First Responder" sceneMemberID="firstResponder"/>
