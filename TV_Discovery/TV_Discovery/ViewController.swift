@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TV_Discovery
 //
-//  Created by iOSKurs on 02.12.16.
+//  Created by iOSKurs on 28.11.16.
 //  Copyright © 2016 iOSKurs. All rights reserved.
 //
 
