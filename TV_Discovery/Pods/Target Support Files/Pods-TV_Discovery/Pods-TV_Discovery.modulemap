@@ -1,6 +1,0 @@
-framework module Pods_TV_Discovery {
-  umbrella header "Pods-TV_Discovery-umbrella.h"
-
-  export *
-  module * { export * }
-}
