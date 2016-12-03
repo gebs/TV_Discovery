@@ -7,14 +7,23 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Episode{
     
-    private var season : Int
-    private var number : Int
+    public var season : Int?
+    public var number : Int?
     
     init(season : Int, number : Int){
         self.season = season
         self.number = number
+    }
+    init(data:JSON){
+        if let season = data["season"].int{
+        self.season = season
+        }
+        if let number = data["number"].int{
+        self.number = number
+        }
     }
 }

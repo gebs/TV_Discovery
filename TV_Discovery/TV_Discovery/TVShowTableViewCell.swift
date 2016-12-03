@@ -33,7 +33,12 @@ class TVShowTableViewCell : UITableViewCell{
                 if let year = show.year{
                   self.lblYear.text =  String(year)
                 }
-                self.lblRating.text = show.rating
+                if let rating = show.rating{
+                    self.lblRating.text = String(rating)
+                }
+                if let episode = show.episode?.number, let season = show.episode?.season{
+                    self.lblEpisode.text = "S" + String(season) + "E" + String(episode)
+                }
             }
             if let tvdbid = show?.ids?.tvdb{
                 let url = "http://thetvdb.com/banners/posters/"+String(tvdbid)+"-1.jpg"

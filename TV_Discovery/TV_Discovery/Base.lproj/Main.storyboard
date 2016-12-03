@@ -59,7 +59,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="85%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-2h-Grg">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="34" id="lha-jr-ifq"/>
+                                                <constraint firstAttribute="width" constant="45" id="lha-jr-ifq"/>
                                                 <constraint firstAttribute="height" constant="21" id="pGM-BZ-kHw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -68,7 +68,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S12E05" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xB-e6-WgA">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="63" id="Nad-mZ-4DZ"/>
+                                                <constraint firstAttribute="width" constant="75" id="Nad-mZ-4DZ"/>
                                                 <constraint firstAttribute="height" constant="21" id="T0F-kY-1UH"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>

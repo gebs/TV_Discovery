@@ -26,7 +26,7 @@ class Show {
     public var trailer : String?
     public var homepage : String?
     public var status : String?
-    public var rating : String?
+    public var rating : Double?
     public var votes : Int?
     public var language : String?
     public var available_translations : Array<String>?
@@ -49,7 +49,8 @@ class Show {
         if let first_aired = data["show"]["first_aired"].string{
             self.first_aired = first_aired
         }
-        self.rating = data["show"]["rating"].string
+        self.rating = data["show"]["rating"].double
+        self.episode = Episode(data:data["episode"])
     }
     init(){
     }
