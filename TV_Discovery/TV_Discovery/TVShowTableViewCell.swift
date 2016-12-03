@@ -23,14 +23,29 @@ class TVShowTableViewCell : UITableViewCell{
                 return _show
             }
             return Show()
-        
+            
         }
         set(newValue){
             show = newValue
-            
-            self.lblTitle.text = show?.title
-            self.lblDescr.text = show?.network
-            //WebServiceManager.Instance.GetShowImages(id: <#T##Int#>, onCompletion: <#T##(String) -> Void#>)
+            if let show = show{
+                self.lblTitle.text = show.title
+                self.lblDescr.text = show.overview
+                if let year = show.year{
+                  self.lblYear.text =  String(year)
+                }
+                self.lblRating.text = show.rating
+            }
+            if let tvdbid = show?.ids?.tvdb{
+                let url = "http://thetvdb.com/banners/posters/"+String(tvdbid)+"-1.jpg"
+                print(url)
+                self.imgPoster.sd_setImage(with: URL(string:url)!)
+                
+
+          /*  WebServiceManager.Instance.GetShowImages(id: String(tvdbid), onCompletion: { (result) in
+                self.imgPoster.sd_setImage(with: URL(string:result))
+                
+            })*/
+            }
         }
     }
     

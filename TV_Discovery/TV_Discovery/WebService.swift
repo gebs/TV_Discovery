@@ -12,9 +12,9 @@ class WebService{
         let requestURL = URL(string:"https://api.trakt.tv"+url)!
         
         var request = URLRequest(url:requestURL)
-        //request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        //request.addValue("2", forHTTPHeaderField: "trakt-api-version")
-        //request.addValue("c7abc6c338f78f1053a4a8d20ab0ba675c039b2cba8f309d3f2baa750fcf3744", forHTTPHeaderField: "trakt-api-key")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("2", forHTTPHeaderField: "trakt-api-version")
+        request.addValue("c7abc6c338f78f1053a4a8d20ab0ba675c039b2cba8f309d3f2baa750fcf3744", forHTTPHeaderField: "trakt-api-key")
         //request.httpMethod = "GET"
         return request
     }

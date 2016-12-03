@@ -26,7 +26,7 @@ class Show {
     public var trailer : String?
     public var homepage : String?
     public var status : String?
-    public var rating : Int?
+    public var rating : String?
     public var votes : Int?
     public var language : String?
     public var available_translations : Array<String>?
@@ -40,16 +40,16 @@ class Show {
         if let year = data["show"]["year"].int{
             self.year = year
         }
-        if let tids = JSON(data["show"]["ids"]).array{
-            
-            //TODO: Add IDs
-        }
+        
+        self.ids = Ids(data:data["show"]["ids"])
+  
         if let overview = data["show"]["overview"].string{
             self.overview = overview
         }
         if let first_aired = data["show"]["first_aired"].string{
             self.first_aired = first_aired
         }
+        self.rating = data["show"]["rating"].string
     }
     init(){
     }

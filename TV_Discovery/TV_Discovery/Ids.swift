@@ -7,10 +7,10 @@
 //
 
 import Foundation
-
+import SwiftyJSON
 class Ids {
     
-    public var trakt : Int
+    public var trakt : Int?
     public var slug : String?
     public var tvdb : Int?
     public var imdb : String?
@@ -24,6 +24,9 @@ class Ids {
         self.imdb = imdb
         self.tmdb = tmdb
         self.tvrage = tvrage
+    }
+    init(data:JSON){
+               tvdb = data["tvdb"].int
     }
     
 }

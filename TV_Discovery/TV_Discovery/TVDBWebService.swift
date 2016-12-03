@@ -26,16 +26,18 @@ class TVDBWebService{
         }
         task.resume()
     }
-    static func GetImages(id:Int,onCompletion:@escaping (String)-> Void){
+    static func GetImages(id:String,onCompletion:@escaping (String)-> Void){
         if (self.tvdbAccess == ""){
             return
         }
         
-        let request = WebService.CreateTVDBRequest(url: "", access_token: tvdbAccess)
+        let request = WebService.CreateTVDBRequest(url: "/series/"+id, access_token: tvdbAccess)
         
         let task = URLSession.shared.dataTask(with: request){data,request,error in
             if let data = data {
+                print(String(describing: data))
                 var showjson = JSON(data:data)
+                print(String(describing: showjson))
             }
         }
         task.resume()

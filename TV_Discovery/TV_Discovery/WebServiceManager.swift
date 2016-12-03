@@ -29,7 +29,7 @@ class WebServiceManager{
     public func GetCurrentShows(onCompletion: @escaping ([Show])-> Void){
         TraktWebService.GetTodayShows(date: Date(), access_token: "", onCompletion: onCompletion)
     }
-    public func GetShowImages(id:Int,onCompletion:@escaping(String)-> Void){
+    public func GetShowImages(id:String,onCompletion:@escaping(String)-> Void){
         TVDBWebService.GetImages(id: id, onCompletion: onCompletion)
     }
     
