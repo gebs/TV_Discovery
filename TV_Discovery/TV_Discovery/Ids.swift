@@ -25,8 +25,14 @@ class Ids {
         self.tmdb = tmdb
         self.tvrage = tvrage
     }
+    
     init(data:JSON){
-               tvdb = data["tvdb"].int
+        trakt = data["trakt"].int
+        slug = data["slug"].string
+        tvdb = data["tvdb"].int
+        imdb = data["imdb"].string
+        tmdb = data["tmdb"].int
+        tvrage = data["tvrage"].int
     }
     
 }
