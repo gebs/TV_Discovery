@@ -43,6 +43,7 @@ class Show {
         
         self.ids = Ids(data:data["show"]["ids"])
         self.episode = Episode(data:data["episode"])
+        self.airs = Airs(data:data["airs"])
   
         if let overview = data["show"]["overview"].string{
             self.overview = overview
@@ -50,10 +51,6 @@ class Show {
         if let first_aired = data["show"]["first_aired"].string{
             self.first_aired = first_aired
         }
-        
-        /*if let airs = Airs(data:data["show"]["airs"]){
-            self.airs = airs
-        }*/
         
         self.runtime = data["show"]["runtime"].int
         self.certification = data["show"]["certification"].string
@@ -73,8 +70,6 @@ class Show {
             self.aired_episodes = aired_episodes
         }
         
-    }
-    init(){
     }
     
 }
