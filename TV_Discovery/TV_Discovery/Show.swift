@@ -42,6 +42,7 @@ class Show {
         }
         
         self.ids = Ids(data:data["show"]["ids"])
+        self.episode = Episode(data:data["episode"])
   
         if let overview = data["show"]["overview"].string{
             self.overview = overview
@@ -49,8 +50,29 @@ class Show {
         if let first_aired = data["show"]["first_aired"].string{
             self.first_aired = first_aired
         }
+        
+        /*if let airs = Airs(data:data["show"]["airs"]){
+            self.airs = airs
+        }*/
+        
+        self.runtime = data["show"]["runtime"].int
+        self.certification = data["show"]["certification"].string
+        self.network = data["show"]["network"].string
+        self.country = data["show"]["country"].string
+        self.updated_at = data["show"]["updated_at"].string
+        self.trailer = data["show"]["trailer"].string
+        self.homepage = data["show"]["homepage"].string
+        self.status = data["show"]["status"].string
         self.rating = data["show"]["rating"].double
-        self.episode = Episode(data:data["episode"])
+        self.votes = data["show"]["votes"].int
+        self.language = data["show"]["language"].string
+        self.available_translations = data["show"]["available_translations"].arrayObject as! Array<String>?
+        self.genres = (data["show"]["genres"]).arrayObject as! Array<String>?
+        
+        if let aired_episodes = data["show"]["aired_episodes"].int{
+            self.aired_episodes = aired_episodes
+        }
+        
     }
     init(){
     }
