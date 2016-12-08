@@ -17,14 +17,6 @@ class Ids {
     public var tmdb : Int?
     public var tvrage : Int?
     
-    init(trakt : Int, slug : String, tvdb : Int, imdb : String, tmdb : Int, tvrage : Int){
-        self.trakt = trakt
-        self.slug = slug
-        self.tvdb = tvdb
-        self.imdb = imdb
-        self.tmdb = tmdb
-        self.tvrage = tvrage
-    }
     
     init(data:JSON){
         trakt = data["trakt"].int
@@ -35,4 +27,12 @@ class Ids {
         tvrage = data["tvrage"].int
     }
     
+    init(trakt : Int, slug : String, tvdb : Int, imdb : String, tmdb : Int, tvrage : Int){
+        self.trakt = trakt
+        self.slug = slug
+        self.tvdb = tvdb
+        self.imdb = imdb
+        self.tmdb = tmdb
+        self.tvrage = tvrage
+    }
 }

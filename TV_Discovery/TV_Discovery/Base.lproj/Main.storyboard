@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--date-->
         <scene sceneID="XVp-3G-xlY">
             <objects>
                 <tableViewController id="52w-6F-hbz" customClass="TVShowViewController" customModule="TV_Discovery" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +108,21 @@
                             <outlet property="delegate" destination="52w-6F-hbz" id="Yic-Cy-nyE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="THT-km-CLd"/>
+                    <navigationItem key="navigationItem" title="date" id="THT-km-CLd">
+                        <barButtonItem key="leftBarButtonItem" title="Previous" id="uNP-DT-L5b">
+                            <connections>
+                                <action selector="PreviousDayButtonClick:" destination="52w-6F-hbz" id="WcO-cM-7wg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="hxn-o1-kdv">
+                            <connections>
+                                <action selector="NextDayButtonClick:" destination="52w-6F-hbz" id="VcC-MJ-BXE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="TableViewTitle" destination="THT-km-CLd" id="iNT-9T-M6G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDe-Jn-PDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +131,7 @@
         <!--Page View Controller-->
         <scene sceneID="qP3-5T-hIx">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="UZF-dS-P9E" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="UZF-dS-P9E" customClass="PageViewController" customModule="TV_Discovery" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eDR-Y1-Xuc"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jO-4r-1Ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
