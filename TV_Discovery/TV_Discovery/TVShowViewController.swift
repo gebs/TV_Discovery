@@ -39,30 +39,34 @@ class TVShowViewController : UITableViewController{
         LoadingOverlay.shared.showOverlay(view: self.view)
         
         WebServiceManager.Instance.GetCurrentShows(onCompletion: {(shows:[Show]) in
-            self.src.Shows = shows
+            self.src.Shows = shows.filter(){
+                if let rating = ($0 as Show).rating as Double?, let ids = ($0 as Show).ids, let id = ids.trakt{
+                    if let fs = LocalDataHandler.FavSeries,fs.contains(id){
+                        ($0 as Show).isFavorite = true
+                    }
+                    
+                    if  let hs = LocalDataHandler.HiddenSeries{
+                        return rating > 5 && !hs.contains(id)
+                    }
+                    else{
+                        return rating > 5
+                    }
+                    
+                    
+                }else {
+                    return false
+                }
+            }
             self.tableView.reloadData()
             LoadingOverlay.shared.hideOverlayView()
         })
         
-    }
-    
-    public func viewDidLoad(date : NSDate){
-        self.date = date
-        let mydateformatter = DateFormatter()
-        mydateformatter.dateFormat = "yyyy-MM-dd"
-        TableViewTitle.title = mydateformatter.string(from: self.date as! Date)
-        self.tableView.tableFooterView = UIView()
-        self.tableView.dataSource = src
-        self.tableView.delegate = src
-        LoadingOverlay.shared.showOverlay(view: self.view)
         
-        WebServiceManager.Instance.GetShowsByDate(date: self.date as! Date, onCompletion: {(shows:[Show]) in
-            self.src.Shows = shows
-            self.tableView.reloadData()
-            LoadingOverlay.shared.hideOverlayView()
-        })
+        
+        
+        
+        
         
         
     }
-    
 }

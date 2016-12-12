@@ -26,7 +26,7 @@ public class LoadingOverlay{
         overlayView.frame = CGRect(x:0,y:0,width:80,height:80)
         overlayView.center = view.center
         //overlayView.backgroundColor = UIColor(white: 0x444444, alpha: 0.7)
-        overlayView.backgroundColor = UIColor(red:10,green:10,blue:10,alpha:0.7)
+        overlayView.backgroundColor = UIColor(red:0,green:0,blue:0,alpha:0.7)
         overlayView.clipsToBounds = true
         overlayView.layer.cornerRadius = 10
         

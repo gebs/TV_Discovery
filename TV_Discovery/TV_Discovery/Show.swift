@@ -32,6 +32,7 @@ class Show {
     public var available_translations : Array<String>?
     public var genres : Array<String>?
     public var aired_episodes : Int?
+    public var isFavorite : Bool = false
     
     init(data:JSON){
         if let title = data["show"]["title"].string{

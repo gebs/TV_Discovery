@@ -14,7 +14,6 @@
 		6325CF2B1DF1CBA6002FF71E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6325CF291DF1CBA6002FF71E /* LaunchScreen.storyboard */; };
 		6325CF411DF1CC06002FF71E /* Airs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6325CF321DF1CC06002FF71E /* Airs.swift */; };
 		6325CF421DF1CC06002FF71E /* AllLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6325CF331DF1CC06002FF71E /* AllLists.swift */; };
-		6325CF431DF1CC06002FF71E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6325CF341DF1CC06002FF71E /* Assets.xcassets */; };
 		6325CF441DF1CC06002FF71E /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6325CF351DF1CC06002FF71E /* Base.lproj */; };
 		6325CF451DF1CC06002FF71E /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6325CF361DF1CC06002FF71E /* Episode.swift */; };
 		6325CF461DF1CC06002FF71E /* Ids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6325CF371DF1CC06002FF71E /* Ids.swift */; };
@@ -27,6 +26,8 @@
 		6325CF4D1DF1CC06002FF71E /* TVShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6325CF3E1DF1CC06002FF71E /* TVShowViewController.swift */; };
 		6325CF4E1DF1CC06002FF71E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6325CF3F1DF1CC06002FF71E /* WebService.swift */; };
 		6325CF4F1DF1CC06002FF71E /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6325CF401DF1CC06002FF71E /* WebServiceManager.swift */; };
+		6340F9CD1DF313F6009EC37F /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340F9CC1DF313F6009EC37F /* LoadingOverlay.swift */; };
+		63613B791DF5E66C009F1CB3 /* LocalDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63613B781DF5E66C009F1CB3 /* LocalDataHandler.swift */; };
 		75185066569346EF169EEE8E /* Pods_TV_Discovery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AC777257B10E529A461BDF /* Pods_TV_Discovery.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		6325CF3E1DF1CC06002FF71E /* TVShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowViewController.swift; sourceTree = "<group>"; };
 		6325CF3F1DF1CC06002FF71E /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		6325CF401DF1CC06002FF71E /* WebServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		6340F9CC1DF313F6009EC37F /* LoadingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		63613B781DF5E66C009F1CB3 /* LocalDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataHandler.swift; sourceTree = "<group>"; };
 		FC32832DAFD601166B14C71B /* Pods-TV_Discovery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TV_Discovery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TV_Discovery/Pods-TV_Discovery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +94,7 @@
 		6325CF1F1DF1CBA6002FF71E /* TV_Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				6340F9CC1DF313F6009EC37F /* LoadingOverlay.swift */,
 				6325CF501DF1CC2B002FF71E /* Model */,
 				6325CF341DF1CC06002FF71E /* Assets.xcassets */,
 				6325CF351DF1CC06002FF71E /* Base.lproj */,
@@ -104,6 +108,7 @@
 				6325CF271DF1CBA6002FF71E /* Assets.xcassets */,
 				6325CF291DF1CBA6002FF71E /* LaunchScreen.storyboard */,
 				6325CF2C1DF1CBA6002FF71E /* Info.plist */,
+				63613B781DF5E66C009F1CB3 /* LocalDataHandler.swift */,
 			);
 			path = TV_Discovery;
 			sourceTree = "<group>";
@@ -238,7 +243,6 @@
 				6325CF2B1DF1CBA6002FF71E /* LaunchScreen.storyboard in Resources */,
 				6325CF281DF1CBA6002FF71E /* Assets.xcassets in Resources */,
 				6325CF441DF1CC06002FF71E /* Base.lproj in Resources */,
-				6325CF431DF1CC06002FF71E /* Assets.xcassets in Resources */,
 				6325CF261DF1CBA6002FF71E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +304,7 @@
 			files = (
 				6325CF461DF1CC06002FF71E /* Ids.swift in Sources */,
 				6325CF411DF1CC06002FF71E /* Airs.swift in Sources */,
+				63613B791DF5E66C009F1CB3 /* LocalDataHandler.swift in Sources */,
 				6325CF4E1DF1CC06002FF71E /* WebService.swift in Sources */,
 				6325CF4A1DF1CC06002FF71E /* TVDBWebService.swift in Sources */,
 				6325CF421DF1CC06002FF71E /* AllLists.swift in Sources */,
@@ -313,6 +318,7 @@
 				6325CF491DF1CC06002FF71E /* TraktWebService.swift in Sources */,
 				6325CF211DF1CBA6002FF71E /* AppDelegate.swift in Sources */,
 				6325CF4D1DF1CC06002FF71E /* TVShowViewController.swift in Sources */,
+				6340F9CD1DF313F6009EC37F /* LoadingOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -405,6 +412,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -433,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC32832DAFD601166B14C71B /* Pods-TV_Discovery.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TV_Discovery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -446,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 02310BF63A731E2E97E72B6D /* Pods-TV_Discovery.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TV_Discovery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -474,6 +484,7 @@
 				6325CF311DF1CBA6002FF71E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

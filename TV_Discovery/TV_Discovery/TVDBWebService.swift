@@ -36,7 +36,7 @@ class TVDBWebService{
         let task = URLSession.shared.dataTask(with: request){data,request,error in
             if let data = data {
                 print(String(describing: data))
-                var showjson = JSON(data:data)
+                let showjson = JSON(data:data)
                 print(String(describing: showjson))
             }
         }

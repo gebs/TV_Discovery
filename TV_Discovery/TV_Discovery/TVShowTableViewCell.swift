@@ -28,28 +28,22 @@ class TVShowTableViewCell : UITableViewCell{
         set(newValue){
             show = newValue
             if let show = show{
+                self.backgroundColor = show.isFavorite ? UIColor.green : UIColor.white
                 self.lblTitle.text = show.title
                 self.lblDescr.text = show.overview
                 if let year = show.year{
                   self.lblYear.text =  String(year)
                 }
                 if let rating = show.rating{
-                    self.lblRating.text = String(rating)
+                    self.lblRating.text = String(round(rating*10)/10)
                 }
                 if let episode = show.episode?.number, let season = show.episode?.season{
-                    self.lblEpisode.text = "S" + String(season) + "E" + String(episode)
+                    self.lblEpisode.text = "S" + (String(season).characters.count > 1 ? "" : "0") + String(season) + "E" + (String(episode).characters.count > 1 ? "" : "0") + String(episode)
                 }
             }
             if let tvdbid = show?.ids?.tvdb{
                 let url = "http://thetvdb.com/banners/posters/"+String(tvdbid)+"-1.jpg"
-                print(url)
-                self.imgPoster.sd_setImage(with: URL(string:url)!)
-                
-
-          /*  WebServiceManager.Instance.GetShowImages(id: String(tvdbid), onCompletion: { (result) in
-                self.imgPoster.sd_setImage(with: URL(string:result))
-                
-            })*/
+                self.imgPoster.sd_setImage(with: URL(string:url)!)  
             }
         }
     }
