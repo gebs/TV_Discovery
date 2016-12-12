@@ -34,6 +34,10 @@ class Show {
     public var aired_episodes : Int?
     public var isFavorite : Bool = false
     
+    init(){
+        
+    }
+    
     init(data:JSON){
         if let title = data["show"]["title"].string{
             self.title = title
