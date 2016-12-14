@@ -13,6 +13,7 @@ class Episode{
     
     public var season : Int?
     public var number : Int?
+    public var title : String?
     
     init(season : Int, number : Int){
         self.season = season
@@ -24,6 +25,9 @@ class Episode{
         }
         if let number = data["number"].int{
         self.number = number
+        }
+        if let title = data["title"].string{
+            self.title = title
         }
     }
 }

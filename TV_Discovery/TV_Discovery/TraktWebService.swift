@@ -59,4 +59,25 @@ class TraktWebService{
         }
         task.resume()
     }
+    static func GetSeasonsbyShow(id:Int,onCompletion: @escaping ([Season])->Void) {
+        
+        let request =  WebService.CreateTraktRequest(url: "shows/"+String(id)+"/seasons?extended=episodes", access_token: "" )
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if  let data = data {
+                if let jsonObjectArray  = JSON(data:data).array{
+                    var seasons = [Season]()
+                    for jsonobj in jsonObjectArray{
+                        seasons.append(Season(data:jsonobj))
+                        
+                    }
+                    onCompletion(seasons)
+                }
+                
+            } else {
+                
+            }
+        }
+        task.resume()
+    }
 }

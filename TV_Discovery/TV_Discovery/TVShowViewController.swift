@@ -60,29 +60,12 @@ class TVShowViewController : UITableViewController{
             self.tableView.reloadData()
             LoadingOverlay.shared.hideOverlayView()
         })
-    }
-    
-    public func viewDidLoad(date : NSDate){
-        self.date = date
-        let mydateformatter = DateFormatter()
-        mydateformatter.dateFormat = "yyyy-MM-dd"
-        TableViewTitle.title = mydateformatter.string(from: self.date as! Date)
-        self.tableView.tableFooterView = UIView()
-        self.tableView.dataSource = src
-        self.tableView.delegate = src
-        LoadingOverlay.shared.showOverlay(view: self.view)
         
-        WebServiceManager.Instance.GetShowsByDate(date: self.date as! Date, onCompletion: {(shows:[Show]) in
-            self.src.Shows = shows
-            self.tableView.reloadData()
-            LoadingOverlay.shared.hideOverlayView()
-        })
         
-        //self.navigationController?.viewControllers.append(self)
+        
+        
+        
+        
         
     }
-    
-    
-    
-    
 }

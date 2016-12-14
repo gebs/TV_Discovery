@@ -11,6 +11,10 @@ import UIKit
 class TVShowTableViewSource : NSObject,UITableViewDataSource,UITableViewDelegate{
    public var Shows:[Show]?
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }

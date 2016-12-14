@@ -32,6 +32,9 @@ class WebServiceManager{
     public func GetShowsByDate(date: Date, onCompletion: @escaping ([Show])-> Void){
         TraktWebService.GetShowsByDate(date : date, access_token: "", onCompletion: onCompletion)
     }
+    public func GetSeasonsByShow(id: Int, onCompletion: @escaping ([Season])->Void){
+        TraktWebService.GetSeasonsbyShow(id: id, onCompletion: onCompletion)
+    }
 
     
     public func GetShowImages(id:String,onCompletion:@escaping(String)-> Void){
