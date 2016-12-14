@@ -20,8 +20,17 @@ class TVShowDetailViewController : UITableViewController{
 
         WebServiceManager.Instance.GetSeasonsByShow(id:(myShow?.ids?.trakt!)!, onCompletion: {(seasons:[Season]) in
             self.src.Show = self.myShow!
-            self.src.Seasons = seasons
+            self.src.Seasons = seasons.filter(){
+                if let number = ($0 as Season).number{
+                    return number > 0;
+                }
+                else{
+                    return false
+                }
+            
+            }
             self.tableView.reloadData()
+            LoadingOverlay.shared.hideOverlayView()
         })
         
     }

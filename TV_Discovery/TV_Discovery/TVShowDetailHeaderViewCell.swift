@@ -28,7 +28,7 @@ class TVShowDetailHeaderViewCell : UITableViewCell{
             show = newValue
             if let show = show{
                 self.backgroundColor = show.isFavorite ? UIColor.green : UIColor.white
-                self.lblTitle.text = show.title
+                self.lblTitle.text = show.title == "" ? "TBA" : show.title
                 self.lblDescr.text = show.overview
                 if let year = show.year{
                     self.lblYear.text =  String(year)

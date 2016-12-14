@@ -61,7 +61,7 @@ class TraktWebService{
     }
     static func GetSeasonsbyShow(id:Int,onCompletion: @escaping ([Season])->Void) {
         
-        let request =  WebService.CreateTraktRequest(url: "shows/"+String(id)+"/seasons?extended=episodes", access_token: "" )
+        let request =  WebService.CreateTraktRequest(url: "/shows/"+String(id)+"/seasons?extended=episodes", access_token: "" )
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if  let data = data {
