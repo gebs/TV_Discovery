@@ -32,7 +32,7 @@ class TVShowViewController : UITableViewController{
     public override func viewDidLoad() {
         self.date = NSDate()
         let mydateformatter = DateFormatter()
-        mydateformatter.dateFormat = "dd.MM.yyyy"
+        mydateformatter.dateFormat = "yyyy-MM-dd"
         TableViewTitle.title = mydateformatter.string(from: self.date as! Date)
         self.tableView.tableFooterView = UIView()
         self.tableView.dataSource = self
@@ -66,7 +66,7 @@ class TVShowViewController : UITableViewController{
     public func viewDidLoad(date : NSDate){
         self.date = date
         let mydateformatter = DateFormatter()
-        mydateformatter.dateFormat = "dd.MM.yyyy"
+        mydateformatter.dateFormat = "yyyy-MM-dd"
         TableViewTitle.title = mydateformatter.string(from: self.date as! Date)
         self.tableView.tableFooterView = UIView()
         self.tableView.dataSource = self
@@ -95,7 +95,9 @@ class TVShowViewController : UITableViewController{
             self.tableView.reloadData()
             LoadingOverlay.shared.hideOverlayView()
         })
-       
+        
+        //self.navigationController?.viewControllers.append(self)
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
