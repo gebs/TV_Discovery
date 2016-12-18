@@ -129,18 +129,55 @@ class TVShowViewController : UITableViewController{
     }
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deletebutton = UITableViewRowAction(style:.default,title:"Delete",handler:{(action,indexPath) in
-            let show = self.Shows![indexPath.row]
+            var tshow : Show?
+            if indexPath.section == 0{
+                tshow = self.Shows?.filter(){
+                    return ($0 as Show).isFavorite
+                }[indexPath.row]
+            
+            }else{
+                tshow = self.Shows?.filter(){
+                    return !($0 as Show).isFavorite
+                }[indexPath.row]
+            }
+            
+            guard let show = tshow else{
+                return
+            }
+            
+            if show.isFavorite{
+                LocalDataHandler.FavSeries?.remove(at: (LocalDataHandler.FavSeries?.index(of:show.ids!.trakt!))!)
+            }
+            
             LocalDataHandler.HiddenSeries?.append(show.ids!.trakt!)
             LocalDataHandler.WriteData()
-            self.Shows!.remove(at: indexPath.row)
+            
+            self.Shows!.remove(at: (self.Shows! as NSArray).index(of: show))
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                
         })
         deletebutton.backgroundColor = UIColor.red
         let favbutton = UITableViewRowAction(style:.default,title:"Favorite",handler:{(action,indexPath) in
-            let show = self.Shows![indexPath.row]
+            
+            var tshow : Show?
+            if indexPath.section == 0{
+                tshow = self.Shows?.filter(){
+                    return ($0 as Show).isFavorite
+                    }[indexPath.row]
+                
+            }else{
+                tshow = self.Shows?.filter(){
+                    return !($0 as Show).isFavorite
+                    }[indexPath.row]
+            }
+            
+            guard let show = tshow else{
+                return
+            }
+            
             LocalDataHandler.FavSeries?.append(show.ids!.trakt!)
             LocalDataHandler.WriteData()
-            show.isFavorite = true
+            show.isFavorite = !show.isFavorite
             
             
             tableView.reloadData();
