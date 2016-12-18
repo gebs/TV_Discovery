@@ -32,7 +32,7 @@ class TVShowViewController : UITableViewController{
     public override func viewDidLoad() {
         self.date = NSDate()
         let mydateformatter = DateFormatter()
-        mydateformatter.dateFormat = "yyyy-MM-dd"
+        mydateformatter.dateFormat = "dd.MM.yyyy"
         TableViewTitle.title = mydateformatter.string(from: self.date as! Date)
         self.tableView.tableFooterView = UIView()
         self.tableView.dataSource = self
@@ -66,7 +66,7 @@ class TVShowViewController : UITableViewController{
     public func viewDidLoad(date : NSDate){
         self.date = date
         let mydateformatter = DateFormatter()
-        mydateformatter.dateFormat = "yyyy-MM-dd"
+        mydateformatter.dateFormat = "dd.MM.yyyy"
         TableViewTitle.title = mydateformatter.string(from: self.date as! Date)
         self.tableView.tableFooterView = UIView()
         self.tableView.dataSource = self
